@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -8,30 +9,52 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      textShadow: {
+        DEFAULT: "1px 1px 1px #9897982F",
+      },
       colors: {
+        background: {
+          DEFAULT: "#ECEDED",
+          variant: "#EDEDED",
+        },
+        text: {
+          DEFAULT: "#5A5A5B",
+          muted: "#989798",
+        },
         light: {
-          primary: "#F0F1F1",
+          DEFAULT: "#F0F1F1",
           variant: "#E5E5E5",
         },
         metal: {
-          primary: "#989BA6",
+          DEFAULT: "#989BA6",
           variant: "#6E7688",
         },
         ocean: {
-          primary: "#95BAE5",
+          DEFAULT: "#95BAE5",
           variant: "#638AD1",
         },
         air: {
-          primary: "#DAE1E6",
+          DEFAULT: "#DAE1E6",
           variant: "#B1BDCB",
         },
         dark: {
-          primary: "#303343",
+          DEFAULT: "#303343",
           variant: "#272A37",
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
 export default config;
