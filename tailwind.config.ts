@@ -15,11 +15,20 @@ const config: Config = {
       colors: {
         background: {
           DEFAULT: "#ECEDED",
-          variant: "#EDEDED",
+          variant: "#F6F6F6",
+          card: {
+            DEFAULT: "#EBEBEB",
+            primary: "#EBEBEB",
+            secondary: "#E8E8E8",
+            lcd: "#B6B9B0",
+          },
         },
         text: {
           DEFAULT: "#5A5A5B",
-          muted: "#989798",
+        },
+        muted: {
+          DEFAULT: "#989798",
+          dark: "#777777",
         },
         light: {
           DEFAULT: "#F0F1F1",
