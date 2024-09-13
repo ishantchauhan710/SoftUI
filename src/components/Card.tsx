@@ -43,6 +43,7 @@ const Card: React.FC<CardProps> = ({
         elevationClasses[elevation],
         variantClasses[variant],
         rounded ? "rounded-2xl" : "",
+        "inline-block",
         className
       )}
     >

@@ -15,9 +15,9 @@ const Typography: React.FC<TypographyProps> = ({
   noShadow = false,
 }) => {
   const baseStyles = {
-    h1: "text-4xl font-bold text-text",
-    h2: "text-3xl font-semibold text-text",
-    h3: "text-2xl font-medium text-text",
+    h1: "text-2xl sm:text-5xl font-medium text-text",
+    h2: "text-xl sm:text-3xl font-medium text-text",
+    h3: "text-lg sm:text-2xl font-medium text-text",
     body1: "text-base font-normal text-text",
     body2: "text-sm font-light text-muted",
     caption: "text-xs font-light text-gray-500 text-muted",

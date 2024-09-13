@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       textShadow: {
         DEFAULT: "1px 1px 1px #9897982F",
+        inset: "inset 1px 1px 3px rgba(255,255,255,0.7), inset -1px -1px 3px rgba(0,0,0,0.2)"
       },
       colors: {
         background: {
