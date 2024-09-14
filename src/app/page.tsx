@@ -17,6 +17,7 @@ import LEDDemo from "./LEDDemo";
 import SwitchDemo from "./SwitchDemo";
 import LCDScreenDemo from "./LCDScreenDemo";
 import SliderDemo from "./SliderDemo";
+import FormFieldsDemo from "./FormFieldsDemo";
 
 const FEATURES = [
   {
@@ -109,6 +110,7 @@ export default function Home() {
         <SwitchDemo />
         <LCDScreenDemo />
         <SliderDemo />
+        <FormFieldsDemo />
         <div className="h-60"></div>
       </Container>
     </div>

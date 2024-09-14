@@ -9,7 +9,7 @@ export default function SliderDemo() {
   const [value3, setValue3] = useState(15);
 
   return (
-    <FeatureContainer title="Slider">
+    <FeatureContainer title="Sliders">
       <div className="mt-4 space-y-8">
         <Slider
           size="small"
