@@ -1,4 +1,3 @@
-import Container from "@/components/Container";
 import Typography from "../components/Typography";
 import Card from "@/components/Card";
 import Icon from "@/components/Icon";

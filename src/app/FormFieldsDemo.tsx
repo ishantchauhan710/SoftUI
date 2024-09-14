@@ -5,8 +5,6 @@ import TextField from "@/components/TextField";
 import { BiLock, BiUser } from "react-icons/bi";
 import TextArea from "@/components/TextArea";
 import Checkbox from "@/components/CheckBox";
-import DatePicker from "@/components/DatePicker";
-import TimePicker from "@/components/TimePicker";
 import Select from "@/components/Select";
 
 export default function FormFieldsDemo() {
