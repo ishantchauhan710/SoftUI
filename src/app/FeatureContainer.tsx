@@ -31,7 +31,7 @@ export default function FeatureContainer({
     <div id={id} className="scroll-m-[5rem]">
       <Typography variant="h3">{title}</Typography>
       <div className="p-2"> {children}</div>
-      <div className="flex justify-end">
+      <div className="flex justify-end my-4">
         <Button onClick={toggleDrawer} label="View Code </>" size="small" />
       </div>
       <Drawer title={title} isOpen={isDrawerOpen} onClose={toggleDrawer}>
