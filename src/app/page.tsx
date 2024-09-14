@@ -21,6 +21,7 @@ import ChipsDemo from "./ChipsDemo";
 import IconsDemo from "./IconsDemo";
 import TypographyDemo from "./TypographyDemo";
 import ButtonDemo from "./ButtonDemo";
+import NavBar from "./NavBar";
 
 const FEATURES = [
   {
@@ -63,7 +64,8 @@ const FEATURES = [
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 pt-14">
+      <NavBar />
       <Container className="grid grid-cols-12 gap-4 items-center">
         <div className="col-span-12 sm:col-span-8 space-y-3">
           <Typography variant="h1">

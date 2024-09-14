@@ -93,7 +93,7 @@ export default function LCDScreenDemo() {
   return (
     <FeatureContainer title="LCD Screens">
       <div className="space-y-3">
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center flex-wrap">
           {/* CLOCK */}
           <LCDScreen className="min-w-[160px]">
             {`${hours}:${minutes}:${seconds}`}
