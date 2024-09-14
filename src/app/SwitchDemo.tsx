@@ -9,7 +9,7 @@ export default function SwitchDemo() {
   const [switchCEnabled, setSwitchCEnabled] = useState(true);
 
   return (
-    <FeatureContainer title="Switch Buttons">
+    <FeatureContainer title="Switch Buttons" id="Switch">
       <div>
         <div className="flex items-center gap-4">
           <Switch

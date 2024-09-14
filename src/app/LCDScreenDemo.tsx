@@ -91,7 +91,7 @@ export default function LCDScreenDemo() {
   };
 
   return (
-    <FeatureContainer title="LCD Screens">
+    <FeatureContainer title="LCD Screens" id="LCD">
       <div className="space-y-3">
         <div className="flex gap-4 items-center flex-wrap">
           {/* CLOCK */}

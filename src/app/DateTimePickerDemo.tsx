@@ -9,7 +9,7 @@ export default function DateTimePickerDemo() {
   const [time, setTime] = useState(new Date());
 
   return (
-    <FeatureContainer title="Date and Time Pickers">
+    <FeatureContainer title="Date and Time Pickers" id="DateTime">
       <div className="space-y-4">
         <div>
           <DatePicker value={date} onChange={(val) => setDate(val)} />

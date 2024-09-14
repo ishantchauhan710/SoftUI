@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
 
 type IconProps = {
   icon: React.ReactElement;
   size?: number;
   className?: string;
+  onClick?: () => void;
 };
 
-const Icon: React.FC<IconProps> = ({ icon, size = 24, className = "" }) => {
+const Icon: React.FC<IconProps> = ({
+  icon,
+  size = 24,
+  className = "",
+  onClick,
+}) => {
   const IconElement = React.cloneElement(icon, {
     size,
     className: `inline-block ${className}`,
@@ -20,6 +27,7 @@ const Icon: React.FC<IconProps> = ({ icon, size = 24, className = "" }) => {
     <div
       className="inline-flex items-center justify-center"
       style={{ width: size, height: size }}
+      onClick={() => onClick?.()}
     >
       {IconElement}
     </div>

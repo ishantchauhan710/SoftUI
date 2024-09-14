@@ -3,7 +3,7 @@ import FeatureContainer from "./FeatureContainer";
 
 export default function ChipsDemo() {
   return (
-    <FeatureContainer title="Chips">
+    <FeatureContainer title="Chips" id="Chip">
       <div className="space-y-4">
         <div className="gap-4 font-medium flex flex-wrap text-center text-sm text-muted">
           <Chip>Default</Chip>

@@ -4,7 +4,7 @@ import { BiBell, BiChat, BiUser } from "react-icons/bi";
 
 export default function IconsDemo() {
   return (
-    <FeatureContainer title="Icons">
+    <FeatureContainer title="Icons" id="Icon">
       <div className="space-y-4">
         <div className="gap-4 font-medium flex flex-wrap text-muted">
           <Icon icon={<BiBell />} size={70} />

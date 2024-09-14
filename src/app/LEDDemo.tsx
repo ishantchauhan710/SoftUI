@@ -8,7 +8,7 @@ export default function LEDDemo() {
   const [ledEnabled, setLedEnabled] = useState(true);
 
   return (
-    <FeatureContainer title="LED Lights">
+    <FeatureContainer title="LED Lights" id="LED">
       <div className="flex gap-4 items-center">
         <div className="flex items-center gap-4">
           <LEDLight color="#ef4444" size={20} enabled={ledEnabled} />

@@ -15,8 +15,6 @@ export default function FormFieldsDemo() {
   const [value3, setValue3] = useState("");
 
   const [checked, setChecked] = useState(false);
-  const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState(new Date());
 
   const [selectedValue1, setSelectedValue1] = useState("option1");
   const [selectedValue2, setSelectedValue2] = useState("option1");
@@ -29,7 +27,7 @@ export default function FormFieldsDemo() {
   ];
 
   return (
-    <FeatureContainer title="Form Fields">
+    <FeatureContainer title="Form Fields" id="Form">
       <div className="space-y-4">
         <TextField
           startIcon={<BiUser />}
@@ -55,12 +53,6 @@ export default function FormFieldsDemo() {
           checked={checked}
           onChange={(e) => setChecked(e.target.checked)}
         />
-        <div>
-          <DatePicker value={date} onChange={(val) => setDate(val)} />
-        </div>
-        <div>
-          <TimePicker value={time} onChange={(val) => setTime(val)} />
-        </div>
         <div>
           <Select
             value={selectedValue1}

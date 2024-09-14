@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 
 export default function CardsDemo() {
   return (
-    <FeatureContainer title="Cards">
+    <FeatureContainer title="Cards" id="Card">
       <div className="gap-4 text-sm font-medium flex flex-wrap text-center">
         <div>
           <Card

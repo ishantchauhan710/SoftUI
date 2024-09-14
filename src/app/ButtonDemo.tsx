@@ -12,7 +12,7 @@ export default function ButtonDemo() {
   };
 
   return (
-    <FeatureContainer title="Buttons">
+    <FeatureContainer title="Buttons" id="Button">
       <div className="space-y-4">
         <div>
           <Button
