@@ -2,8 +2,6 @@ import Container from "@/components/Container";
 import Typography from "../components/Typography";
 import Card from "@/components/Card";
 import Icon from "@/components/Icon";
-import { GrCube } from "react-icons/gr";
-import { features } from "process";
 import {
   FaAtom,
   FaBolt,
@@ -12,12 +10,17 @@ import {
   FaCogs,
   FaCube,
 } from "react-icons/fa";
-import LEDLight from "@/components/LEDLight";
 import LEDDemo from "./LEDDemo";
 import SwitchDemo from "./SwitchDemo";
 import LCDScreenDemo from "./LCDScreenDemo";
 import SliderDemo from "./SliderDemo";
 import FormFieldsDemo from "./FormFieldsDemo";
+import DateTimePickerDemo from "./DateTimePickerDemo";
+import CardsDemo from "./CardsDemo";
+import ChipsDemo from "./ChipsDemo";
+import IconsDemo from "./IconsDemo";
+import TypographyDemo from "./TypographyDemo";
+import ButtonDemo from "./ButtonDemo";
 
 const FEATURES = [
   {
@@ -111,6 +114,12 @@ export default function Home() {
         <LCDScreenDemo />
         <SliderDemo />
         <FormFieldsDemo />
+        <DateTimePickerDemo />
+        <CardsDemo />
+        <ChipsDemo />
+        <IconsDemo />
+        <TypographyDemo />
+        <ButtonDemo />
         <div className="h-60"></div>
       </Container>
     </div>
