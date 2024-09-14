@@ -27,7 +27,7 @@ const Drawer: React.FC<DrawerProps> = ({
       onClick={onClose}
     >
       <div
-        className={`fixed top-0 right-0 bg-white w-[50vw] h-screen overflow-y-auto shadow-lg transform transition-transform ${
+        className={`fixed top-0 right-0 bg-white w-[90vw] md:w-[50vw] h-screen overflow-y-auto shadow-lg transform transition-transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

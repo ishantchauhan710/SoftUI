@@ -124,7 +124,7 @@ export default function Home() {
   return (
     <div className="space-y-12 pt-14">
       <NavBar />
-      <div className="px-8">
+      <div className="px-1 md:px-8">
         <div className="grid grid-cols-12 gap-4">
           <div className="hidden md:block col-span-12 md:col-span-3 h-fit max-h-screen overflow-y-auto bg-background-variant shadow-sm rounded-md">
             {COMPONENTS.map((component, index) => {
@@ -149,7 +149,7 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="col-span-12 md:col-span-9 px-10 space-y-10">
+          <div className="col-span-12 md:col-span-9 px-5 md:px-10 space-y-10">
             <div className="space-y-3">
               <Typography variant="h1">
                 Soft UI: A Neumorphism and Glassmorphism based UI library.
