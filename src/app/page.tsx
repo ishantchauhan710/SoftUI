@@ -16,6 +16,7 @@ import LEDLight from "@/components/LEDLight";
 import LEDDemo from "./LEDDemo";
 import SwitchDemo from "./SwitchDemo";
 import LCDScreenDemo from "./LCDScreenDemo";
+import SliderDemo from "./SliderDemo";
 
 const FEATURES = [
   {
@@ -107,6 +108,8 @@ export default function Home() {
         <LEDDemo />
         <SwitchDemo />
         <LCDScreenDemo />
+        <SliderDemo />
+        <div className="h-60"></div>
       </Container>
     </div>
   );

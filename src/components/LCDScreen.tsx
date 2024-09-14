@@ -1,68 +1,47 @@
-"use client";
-
 import { lcdFont } from "@/lib/fonts";
 import Card from "./Card";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { ReactNode } from "react";
 
-export default function LCDScreen() {
-  const [hours, setHours] = useState<string>("00");
-  const [minutes, setMinutes] = useState<string>("00");
-  const [seconds, setSeconds] = useState<string>("00");
+type Elevation = "none" | "outside" | "inside" | "mix";
 
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      const currentTime = new Date();
+type LCDScreenProps = {
+  children: ReactNode;
+  className?: string;
+  elevation?: Elevation;
+  showGrid?: boolean;
+};
 
-      setHours(addLeadingZero(currentTime.getHours()));
-      setMinutes(addLeadingZero(currentTime.getMinutes()));
-      setSeconds(addLeadingZero(currentTime.getSeconds()));
-    }, 1000);
-
-    return () => clearInterval(timerId);
-  }, []);
-
-  const addLeadingZero = (num: number) =>
-    num < 10 ? `0${num}` : num.toString();
-
-  const [temperature, setTemperature] = useState(20);
-
-  useEffect(() => {
-    const temperatureId = setInterval(() => {
-      setTemperature((prevTemperature) => {
-        const newTemperature = prevTemperature + 1;
-        if (newTemperature >= 25) {
-          return 16;
-        }
-        return newTemperature;
-      });
-    }, 1000);
-
-    return () => clearInterval(temperatureId);
-  }, []);
-
+export default function LCDScreen({
+  children,
+  className,
+  elevation = "inside",
+  showGrid = false,
+}: LCDScreenProps) {
   return (
-    <div className="flex gap-4 items-center">
-      <Card
-        variant="lcd"
-        className={clsx(
-          "text-4xl p-3 rounded-md min-w-[160px] text-center",
-          lcdFont.className
-        )}
-        elevation="inside"
-      >
-        {`${hours}:${minutes}:${seconds}`}
-      </Card>
-      <Card
-        variant="lcd"
-        className={clsx(
-          "text-4xl p-3 rounded-md min-w-[120px] text-center",
-          lcdFont.className
-        )}
-        elevation="mix"
-      >
-        {`${temperature}°C`}
-      </Card>
-    </div>
+    <Card
+      variant="lcd"
+      className={clsx(
+        "relative text-4xl p-3 rounded-md text-center",
+        lcdFont.className,
+        className
+      )}
+      elevation={elevation}
+    >
+      {showGrid && (
+        <div
+          className="absolute w-full h-full inset-0"
+          style={{
+            backgroundImage: `
+          linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)
+        `,
+            backgroundSize: "10px 10px",
+            pointerEvents: "none",
+          }}
+        ></div>
+      )}
+      <div>{children}</div>
+    </Card>
   );
 }
